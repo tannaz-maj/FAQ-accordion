@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="all/all.css" />
+    <script src="all/all.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.js"></script>
+  </head>
+  <body>
+
+    <section>
+        <div class="mytitle">
+          <span>&#10022</span>
+          <h1>FAQs</h1>
+        </div>
+  
+        <h3>
+          item 1 <span><i class="fas fa-plus-circle"></i></span>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur optio
+          expedita id excepturi delectus veniam sint doloribus laborum molestias
+          beatae?
+        </p>
+        <h3>
+          item 2 <span><i class="fas fa-plus-circle"></i></span>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur optio
+          expedita id excepturi delectus veniam sint doloribus laborum molestias
+          beatae?
+        </p>
+        <h3>
+          item 3 <span><i class="fas fa-plus-circle"></i></span>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur optio
+          expedita id excepturi delectus veniam sint doloribus laborum molestias
+          beatae?
+        </p>
+        <h3>
+          item 4 <span><i class="fas fa-plus-circle"></i></span>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur optio
+          expedita id excepturi delectus veniam sint doloribus laborum molestias
+          beatae?
+        </p>
+    </section>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("span").click(function () {
+
+                $(this).parent("h3").next("p").slideToggle()
+                if ($(this).hasClass("expand")) {
+                    $(this).html("<i class='fas fa-plus-circle'></i>")
+                    $(this).removeClass("expand")
+                }
+                else {
+                    $(this).html("<i class='fas fa-minus-circle'></i>")
+                    $(this).addClass("expand")
+                }
+
+            })
+
+        });
+    </script>
+
+
+  </body>
+</html>
